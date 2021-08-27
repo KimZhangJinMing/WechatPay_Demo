@@ -1,0 +1,50 @@
+server:
+  port: 8888
+wechatPay:
+  global:
+    privateKey: 'MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDB7lvQJ1ySmMB0
+                 o/XX98nZd2SnGDjmfSsWaf5nhjF7Itssnuq/oEqFGFoBNBkS8BRK2AMGvWkxJsv3
+                 LUFa0mJxL3pFgXtf9iEyOcOWkztkSqPColSRaNSTDw8Qaki+EFoy9JzEOq5GtkGo
+                 pdnhVBzWMXHbh6/LwlKHkunQK/qMeaofbQI3mGvzVCQwv3jCar0FulGc6jq+ci9u
+                 Dx4pbTudIHf3IZIhn53dSifVueK+J0KR6mWFac9klVRX3ZzAfGXic/kTlCJPE8o+
+                 YaZ6wdX55EYk3+bjsjeMzvC6Vn2DC2tjRFaagke7eTyL+F0fb4oe8taRm5aIDIKe
+                 1CgOhdQlAgMBAAECggEABhcAFxdFVu0pDgCgFboYQpX3OTAPiV1g3wFRFdsm7qD3
+                 lP0gjgfwjyFmoicKqoeTe44w+iM0jHCVcxues8VrhfZhtpEMWMUX4cXimHXjJZEa
+                 d2A1m6NZGY0dgfx0cFN/IZ6A1cCp/Fp40Vzz7JmBllBTLPujz5g4kz1PzlOzOHoD
+                 iThcLWHtBXyKvpKX6OpsxP5W1aX7R7mCqBpbuHfEUMLnqhwLClY7H/ZpvnnPUNJ6
+                 tMOgLrmTcgZAN4AkH0ERoVqRdBiQZczsetueyMFTvMvGL0AMaGUj40c4CODvJqB9
+                 ETBi0LDewNoYWzOP5X/k8G3UHX40QrRm82Y7nYUyOQKBgQD023D9NJKZ2/OvhrDX
+                 jrNdAtuyERFP91guo+VPzdf3cg9+02aZGEgLgq8hLMv9xIbDzdk3dLE84oF6NPLR
+                 7z+5y9vBfEJRMQhhnYZlNjl2JSOrkS1E7fVO3WhAeNcYokq18wWtZi7Pi1ovdKIJ
+                 tkbfjdIQhYjtVNTYqbnNy3R8NwKBgQDKwaJIdvGeasYuHpItVEP6VJUBElav2ijh
+                 /Qm8F/os9yrLPKUveSMlHPbdQD8GO9RNGlqz3j9kiFXAC3ygmVxoHgiRUegFkNGn
+                 2NIYK+OeAxZQEA+4i1BnQ8nKXb0W0GC3OFYL1pK65aED+T6N/fVcqCtnWClUv7La
+                 /iknSq3cgwKBgQDb8cYj3DaXuGjD0bRGXKunL+sSn5wyfZcbhiN0tQ16+10J6nEt
+                 sg79L+2KWkf+8qqvddfZpZuTek8d7DP1+ff/OCx1N94GOooxzSMtBTFGfAP3mBfW
+                 4/1HU0DTMPjd6uI7YEpIQRJpYd6n5Betq6ssIqOALcMalOoAmS0Ku+gtrwKBgFDy
+                 BQvREJ0iG4SGB+242nqyEdqfq6QBAJlYH+7L08Dn3FnPGFNflTxX1+Z0o7SlZhhy
+                 EQwGCmDkXPeSnmqvT0jx1JHPlUXDjy/nS9kCjJikut+zydLvK2ZOld0Il1joT/RV
+                 tWR8gY/D5QhlFSgy3yXirZFQjQ+ciJcNKPjaw5ZpAoGAKzG/5mVHS2KPFjiknnqr
+                 GFdtX5SLO8GpkPI6ULoOo2pEKlx+DC6CrEZDcq7zMpPW7VCb0vjQhyiSxScuJG0x
+                 Ta0ZEXrXO5ATL9h7aCy6D47QVeXqTrABHQjflgqtsF+dmYLL6NEemP/51B3tM7Vl
+                 q0jJEf6K1I3l8KBLEFJAQ7Y='
+    apiV3Key: 'df4dfgKJDF4cvjdhfsduywer34234dfs'
+    mchId: '132731315'
+    appId: 'wxef3d5c69941cae30'
+    mchSerialNo: '61CD863C0DAF80CA82DC17FEBC5EF37C24338E57'
+    currency: 'HKD'
+    wechatCertificatesUrl: 'https://api.mch.weixin.qq.com/v3/certificates'
+  order:
+    merchantCategoryCode: '4411'
+    orderUrl: 'https://api.mch.weixin.qq.com/hk/v3/transactions/mweb'
+    orderNotifyUrl: 'https://qp-shore.gentingcruises.com/WechatPay_Kim/callback'
+    orderQueryByTransactionIdUrl: 'https://api.mch.weixin.qq.com/hk/v3/transactions/id/{0}'
+    orderQueryByOutTradeNoUrl: 'https://api.mch.weixin.qq.com/hk/v3/transactions/out-trade-no/{0}'
+    orderCloseByTransactionIdUrl: 'https://api.mch.weixin.qq.com/hk/v3/transactions/{0}/close'
+    orderCloseByOutTradeNoUrl: 'https://api.mch.weixin.qq.com/hk/v3/transactions/out-trade-no/{0}/close'
+spring:
+  jackson:
+    # \u9A7C\u5CF0\u8F6C\u4E0B\u5212\u7EBF\u547D\u540D\u7B56\u7565
+    property-naming-strategy: SNAKE_CASE
+    # \u4E0D\u5E8F\u5217\u5316\u503C\u4E3Anull\u7684\u5B57\u6BB5
+    default-property-inclusion: non_null
